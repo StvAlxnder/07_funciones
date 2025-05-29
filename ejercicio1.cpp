@@ -12,8 +12,12 @@ int main(){
     cout<<"Ingrese el segundo numero: " ; cin>>num2;
 
     //llamadas a la función resta
-    resta(num1,num2);
-    resta(num2,num1);
+    if(num1!=num2){
+        resta(num1, num2);
+        resta(num2, num1);
+    }
+    else
+        resta(num1, num2);
 
     //llamada a la función suma
     resultado = suma(num1, num2);
@@ -25,8 +29,12 @@ int main(){
     cout<<"\nLa multiplicacion de "<<num1<<" por "<<num2<<" es "<<resultado;
     
     //llamada a la función división
-    division(num1, num2);
-    division(num2, num1);
+    if(num1!=num2){
+        division(num1, num2);
+        division(num2, num1);
+    }
+    else
+        division(num1, num2);
     return 0;
 }
 
@@ -55,7 +63,7 @@ int producto(int val1, int val2){
 void division(double val1, double val2){
     double cociente;
     if(val2==0){
-        cout<<"\nError: no se puede dividir entre cero.";
+        cout<<"\nLa división de "<<val1<<" entre "<<val2<<" es indefinida.";
     }
     else{
         cociente=val1/val2;
