@@ -54,6 +54,11 @@ int producto(int val1, int val2){
 //definición de la función división
 void division(double val1, double val2){
     double cociente;
-    cociente=val1/val2;
-    cout<<"\nLa division de "<<val1<<" entre "<<val2<<" es "<<cociente;
+    if(val2==0){
+        cout<<"\nError: no se puede dividir entre cero.";
+    }
+    else{
+        cociente=val1/val2;
+        cout<<"\nLa division de "<<val1<<" entre "<<val2<<" es "<<cociente;        
+    }
 }
