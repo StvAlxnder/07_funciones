@@ -1,4 +1,5 @@
 #include <iostream>/*2025-119012 STEVE ALEXANDER MAMANI ESTELA*/
+#include <iomanip>
 using namespace std;
 //prototipos de funciones resta y producto
 void resta(int val1, int val2);
@@ -12,7 +13,7 @@ int main(){
     cout<<"Ingrese el segundo numero: " ; cin>>num2;
 
     //llamadas a la función resta
-    if(num1!=num2){
+    if(num1!=num2){//condición para evitar dar dos resultados iguales
         resta(num1, num2);
         resta(num2, num1);
     }
@@ -29,7 +30,7 @@ int main(){
     cout<<"\nLa multiplicacion de "<<num1<<" por "<<num2<<" es "<<resultado;
     
     //llamada a la función división
-    if(num1!=num2){
+    if(num1!=num2){//condición para evitar dar dos resultados iguales
         division(num1, num2);
         division(num2, num1);
     }
@@ -62,11 +63,12 @@ int producto(int val1, int val2){
 //definición de la función división
 void division(double val1, double val2){
     double cociente;
-    if(val2==0){
+    if(val2==0){//condición para evitar dividir entre cero
         cout<<"\nLa división de "<<val1<<" entre "<<val2<<" es indefinida.";
     }
     else{
         cociente=val1/val2;
+        cout<<fixed<<setprecision(3);//establece el máximo de decimales a 3
         cout<<"\nLa division de "<<val1<<" entre "<<val2<<" es "<<cociente;        
     }
 }
