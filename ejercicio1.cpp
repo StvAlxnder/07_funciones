@@ -68,7 +68,7 @@ void division(double val1, double val2){
     }
     else{
         cociente=val1/val2;
-        cout<<fixed<<setprecision(3);//establece el máximo de decimales a 3
-        cout<<"\nLa division de "<<val1<<" entre "<<val2<<" es "<<cociente;        
+        cout<<"\nLa division de "<<val1<<" entre "<<val2<<" es "<<fixed<<setprecision(3)<<cociente;//establece el máximo de decimales a 3
+        cout<<fixed<<setprecision(0);//vuelve a establecer el máximo de ´variables a 0
     }
 }
