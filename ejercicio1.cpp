@@ -14,9 +14,9 @@ int main(){
     resta(num2,num1);
 
     //llamada a la función producto
-    producto(num1,num2);
+    resultado = producto(num1,num2);
 
-    cout<<"\nLa multiplicación de "<<num1<<" por "<<num2<<" es "<<resultado;
+    cout<<"\nLa multiplicacion de "<<num1<<" por "<<num2<<" es "<<resultado;
     return 0;
 }
 
@@ -24,7 +24,7 @@ int main(){
 void resta(int val1, int val2){
     int sustrac; //variable local
     sustrac = val1 - val2;
-    cout<<"La resta de "<<val1<<" - "<<val2<<" es "<<sustrac;
+    cout<<"\nLa resta de "<<val1<<" - "<<val2<<" es "<<sustrac;
 }
 
 //definición de la función producto
