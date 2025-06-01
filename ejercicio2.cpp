@@ -24,12 +24,10 @@ int main(){//función principal main
 
 //definición de la función restasSucesivas
 int restasSucesivas(int val1, int val2){
-    int resto;
-    do{
-        resto = val1 - val2;
+    while(val1>=val2){
         val1 = val1 - val2;
-    } while(resto>=val2);
-    return resto;
+    }
+    return val1;
 }
 
 //definición de la función division
