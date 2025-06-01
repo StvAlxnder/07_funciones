@@ -1,20 +1,33 @@
 #include <iostream>
 using namespace std;
+int sumaDivisores(int val);
+void esPerfecto(int suma, int val);
 
 int main(){
-    int numero, suma;
+    int numero;
     cout<<"Detector de numeros perfectos"<<endl;
     cout<<"Ingrese su numero: "; cin>>numero;
+    esPerfecto(sumaDivisores(numero), numero);
+    return 0;
+}
+
+//definición de función sumaDivisores
+int sumaDivisores(int val){
+    int suma;
     suma = 0;
-    for(int i = 1; i < numero; i++){
-        if(numero%i==0){
+    for(int i = 1; i < val; i++){
+        if(val%i == 0){
             suma = suma + i;
         }
     }
-    if(suma==numero){
-        cout<<"El numero "<<numero<<" es un numero perfecto.";
+    return suma;
+}
+
+//definición de función esPerfecto
+void esPerfecto(int suma, int val){
+    if(suma == val){
+        cout<<"El numero "<<val<<" es un numero perfecto.";
     }
     else
-        cout<<"El numero "<<numero<<" NO es un numero perfecto.";
-    return 0;
+        cout<<"El numero "<<val<<" NO es un numero perfecto.";
 }
