@@ -17,7 +17,9 @@ int main(){
         cout<<"Ingrese el segundo numero entero positivo: "; cin>>num2;
         if(!esPositivo(num2))
             cout<<"El numero debe ser mayor que 0.\n";
-    }while(!esPositivo(num2));
+        else if(num2 == num1)
+            cout<<"El numero debe ser distinto al primero.\n";
+    }while(!esPositivo(num2) || num1 == num2);
     sonAmigos(num1, num2);
     return 0;
 }
