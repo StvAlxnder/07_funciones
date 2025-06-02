@@ -2,12 +2,18 @@
 using namespace std;
 int sumaDivisoresPropios(int val);
 void sonAmigos(int val1, int val2);
+bool esPositivo(int val);
 
 int main(){
     int num1, num2;
     cout<<"Detector de numeros amigos\n";
     cout<<"Ingrese dos numeros enteros positivos: "; cin>>num1>>num2;
-    sonAmigos(num1, num2);
+    if(esPositivo(num1) && esPositivo(num2))
+        sonAmigos(num1, num2);
+    else{
+        cout<<"Error: ambos valores deben ser mayores a 0.";
+        return 1;
+    }
     return 0;
 }
 
@@ -28,4 +34,9 @@ void sonAmigos(int val1, int val2){
         cout<<"Los numeros "<<val1<<" y "<<val2<<" SI son numeros amigos.\n";
     else
         cout<<"Los numeros "<<val1<<" y "<<val2<<" NO son numeros amigos.\n";
+}
+
+//definición de la función esPositivo
+bool esPositivo(int val){
+    return val>0;
 }
