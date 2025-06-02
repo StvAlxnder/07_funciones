@@ -1,5 +1,6 @@
 #include <iostream>
 using namespace std;
+
 int sumaDivisoresPropios(int val);
 void sonAmigos(int val1, int val2);
 bool esPositivo(int val);
@@ -7,20 +8,23 @@ bool esPositivo(int val);
 int main(){
     int num1, num2;
     cout<<"Detector de numeros amigos\n";
-    cout<<"Ingrese dos numeros enteros positivos: "; cin>>num1>>num2;
-    if(esPositivo(num1) && esPositivo(num2))
-        sonAmigos(num1, num2);
-    else{
-        cout<<"Error: ambos valores deben ser mayores a 0.";
-        return 1;
-    }
+    do{
+        cout<<"Ingrese el primer numero entero positivo: "; cin>>num1;
+        if(!esPositivo(num1))
+            cout<<"El numero debe ser mayor que 0.\n";
+    }while(!esPositivo(num1));
+    do{
+        cout<<"Ingrese el segundo numero entero positivo: "; cin>>num2;
+        if(!esPositivo(num2))
+            cout<<"El numero debe ser mayor que 0.\n";
+    }while(!esPositivo(num2));
+    sonAmigos(num1, num2);
     return 0;
 }
 
 //definición de la función sumaDivisoresPropios
 int sumaDivisoresPropios(int val){
-    int suma;//variable local
-    suma = 0;
+    int suma = 0;//variable local
     for(int i = 1; i < val; i++){
         if(val%i==0)
             suma = suma + i;
