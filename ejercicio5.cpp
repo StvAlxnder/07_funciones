@@ -1,15 +1,13 @@
 #include <iostream>
 using namespace std;
 int sumaDivisoresPropios(int val);
+void sonAmigos(int val1, int val2);
 
 int main(){
     int num1, num2;
     cout<<"Detector de numeros amigos\n";
     cout<<"Ingrese dos numeros enteros positivos: "; cin>>num1>>num2;
-    if(sumaDivisoresPropios(num1) == num2 && sumaDivisoresPropios(num2) == num1)//llamada a la función sumaDivisoresPropios
-        cout<<"Los numeros "<<num1<<" y "<<num2<<" SI son numeros amigos.\n";
-    else
-        cout<<"Los numeros "<<num1<<" y "<<num2<<" NO son numeros amigos.\n";
+    sonAmigos(num1, num2);
     return 0;
 }
 
@@ -22,4 +20,12 @@ int sumaDivisoresPropios(int val){
             suma = suma + i;
     }
     return suma;
+}
+
+//definición de la función sonAmigos
+void sonAmigos(int val1, int val2){
+    if(sumaDivisoresPropios(val1) == val2 && sumaDivisoresPropios(val2) == val1)//llamada a la función sumaDivisoresPropios
+        cout<<"Los numeros "<<val1<<" y "<<val2<<" SI son numeros amigos.\n";
+    else
+        cout<<"Los numeros "<<val1<<" y "<<val2<<" NO son numeros amigos.\n";
 }
