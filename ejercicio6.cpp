@@ -1,15 +1,14 @@
 #include <iostream>
 using namespace std;
 int cantidadDivisores(int val);
+void esPrimo(int numDivisores);
 
 int main(){
     int num;
     cout<<"Detector de numeros primos"<<endl;
     cout<<"Ingrese un numero: "; cin>>num;
-    if(cantidadDivisores(num) != 2)//llamada a la función cantidadDivisores
-        cout<<"El numero "<<num<<" NO es primo.";
-    else
-        cout<<"El numero "<<num<<" SI es primo.";
+    cout<<"El numero "<<num;
+    esPrimo(cantidadDivisores(num));
     return 0;
 }
 
@@ -21,4 +20,12 @@ int cantidadDivisores(int val){
             divisores++;
     }
     return divisores;
+}
+
+//definición de la función esPrimo
+void esPrimo(int numDivisores){
+    if(numDivisores != 2)
+        cout<<" NO es primo.\n";
+    else
+        cout<<" SI es primo.\n";
 }
