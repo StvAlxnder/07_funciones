@@ -9,7 +9,7 @@ int main(){
         <<"Ingrese el total de elementos a combinar: "; cin >> num1;
     cout<<"Ingrese la cantidad a seleccionar: "; cin >> num2;
     if(num1 < 0 || num2 < 0){
-        cout<<"Error: ningun valor debe ser";
+        cout<<"Error: ningun valor debe ser negativo.";
         return 1;
     }
     else if(num2 > num1){
