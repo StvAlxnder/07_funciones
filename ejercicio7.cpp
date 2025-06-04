@@ -8,6 +8,10 @@ int main(){
     cout<<"Funcion combinatoria\n"
         <<"Ingrese el total de elementos a combinar: "; cin >> num1;
     cout<<"Ingrese la cantidad a seleccionar: "; cin >> num2;
+    if(num2>num1){
+        cout<<"Error: la cantidad a seleccionar no puede ser mayor al número de elementos.";
+        return 1;
+    }
     C = combinatoria(num1, num2);
     cout<<"La respuesta es: "<<C<<endl;
     return 0;
