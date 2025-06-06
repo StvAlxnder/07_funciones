@@ -19,6 +19,11 @@ int main () {
 void MCDyMCM(int a, int b, int *mcd, int *mcm){
     a = abs(a);
     b = abs(b);
+    if(a == 0 && b == 0){
+        *mcd = 0;
+        *mcm = 0;
+        return;
+    }
     int i = 1;
     *mcd = 1;
     while (i <= a && i <= b){
