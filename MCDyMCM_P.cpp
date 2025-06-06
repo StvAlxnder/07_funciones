@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 using namespace std;
 
 void MCDyMCM(int a, int b, int *mcd, int *mcm);
@@ -16,8 +17,9 @@ int main () {
 
 //definición de la función MCDyMCM
 void MCDyMCM(int a, int b, int *mcd, int *mcm){
-    int i;
-    i = 1;
+    a = abs(a);
+    b = abs(b);
+    int i = 1;
     *mcd = 1;
     while (i <= a && i <= b){
         if (a % i == 0 && b % i == 0)
