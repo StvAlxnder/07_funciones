@@ -4,8 +4,10 @@ using namespace std;
 void MCDyMCM(int a, int b, int &mcd, int &mcm);
 
 int main() {
-    int x = 18, y = 24;
-    int rMCD, rMCM;
+    int x, y, rMCD, rMCM;
+    cout<<"Calcula MCD y MCM"<<endl;
+    cout<<"Ingrese el primer numero: "; cin>>x;
+    cout<<"Ingrese el segundo numero: "; cin>>y;
     MCDyMCM(x, y, rMCD, rMCM);
     cout<<"MCD: "<<rMCD<<endl;
     cout<<"MCM: "<<rMCM<<endl;  
