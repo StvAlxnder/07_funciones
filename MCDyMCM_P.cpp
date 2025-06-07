@@ -3,6 +3,7 @@
 using namespace std;
 
 void MCDyMCM(int a, int b, int *mcd, int *mcm);
+int algEuclides(int a, int b);
 
 int main () {
     int x, y, rMCD, rMCM;
@@ -32,12 +33,16 @@ void MCDyMCM(int a, int b, int *mcd, int *mcm){
     }
     return;
 }
-    int i = 1;
-    *mcd = 1;
-    while (i <= a && i <= b){
-        if (a % i == 0 && b % i == 0)
-            *mcd = i;
-        i = i + 1;
+    *mcd = algEuclides(a, b);
+    *mcm = (a / *mcd) * b;
+}
+
+//definición de la función algEuclides
+int algEuclides(int a, int b){
+    while (b != 0) {
+        int temp = b;//variable local
+        b = a % b;
+        a = temp;
     }
-    *mcm = (a*b) / (*mcd);
+    return a;
 }
