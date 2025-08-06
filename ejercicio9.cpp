@@ -23,7 +23,7 @@ int factorial (int a){
 void suma (float b){
     float S;
     S = 0;
-    for (int i=1; i<=b; i++){
+    for (float i=1; i<=b; i++){
         S = S + ((factorial(i)) / (2*i));
     }
     cout << "La suma es " << S << "." << endl;
